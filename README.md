@@ -4,7 +4,7 @@ XORed API keys generator for your Swift app
 ## Purpose
 Often iOS apps contain various keys such as: SDK client ID, SDK secret key and so on. Raw strings can be easily found by `strings` or Hopper and therefore accessible to nearly anyone. Easiest way out is to (at least) XOR those keys. Purpose of this script is to XOR the given keys and output a Swift `enum` with encrypted values under the hood. 
 
-> IMPORANT: This tool doesn't prevent your strings from being stolen by a praying eyes. All it does is hide strings from being discovered by the 'strings' utility or by a disassembler. Therefore it is strongly not recommended to put sensitive data like S3 secret key in your app at all.
+> IMPORANT: This tool doesn't prevent your strings from being stolen by a praying eyes. All it does is hide strings from being discovered by the 'strings' utility or by a disassembler. Therefore **it is strongly not recommended to put sensitive data like S3 secret key in your app at all** - rather hide them behind you server's API and do not pass over the network in any circumstances.
 
 ## Usage
 * You start by creating a `json` file containing desired keys: 
